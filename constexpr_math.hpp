@@ -1,4 +1,5 @@
-#pragma once
+#ifndef CONSTEXPR_MATH_HPP_CHAPERON
+#define CONSTEXPR_MATH_HPP_CHAPERON
 
 namespace cexpr_math{
 template <typename T>
@@ -32,3 +33,5 @@ constexpr T pow(const T& a, const int& b)
 }
 
 }
+
+#endif

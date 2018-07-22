@@ -1,4 +1,5 @@
-#pragma once
+#ifndef VECTOR3D_HPP_CHAPERON
+#define VECTOR3D_HPP_CHAPERON
 
 template <typename T>
 constexpr double sqr(const T& s){return s*s;}
@@ -177,3 +178,5 @@ inline double angle(const Vector3D& u, const Vector3D& v){
       double cos=u*v/(u.norm()*v.norm());
       return std::acos(cos);
 }
+
+#endif

@@ -24,7 +24,8 @@
 //
 //----------------------------------------------------------------------------------------
 
-# pragma once
+#ifndef NAMEDPARAMETER_HPP_CHAPERON
+#define NAMEDPARAMETER_HPP_CHAPERON
 
 namespace np
 {
@@ -179,3 +180,5 @@ namespace np
 # define NP_MAKE_NAMED_PARAMETER(name) \
 constexpr auto name = np::NamedParameterHelper<struct name##_tag>{};\
 template <class Type> using name##_ = np::NamedParameterHelper<struct name##_tag>::named_argument_type<Type>
+
+#endif
