@@ -27,6 +27,10 @@
 #ifndef NAMEDPARAMETER_HPP_CHAPERON
 #define NAMEDPARAMETER_HPP_CHAPERON
 
+#include <type_traits>
+#include <utility>
+#include <tuple>
+
 namespace np
 {
    namespace detail
