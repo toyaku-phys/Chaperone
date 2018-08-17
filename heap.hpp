@@ -7,17 +7,17 @@ class heap
    T sum;
    T c;
    public:
-   heap<T>() noexcept (In_RELEASE){}
-   heap<T>(const T& val) noexcept(In_RELEASE);
-   heap<T>& operator+=(const T& val) noexcept(In_RELEASE);
-   heap<T>& operator=(const T& val) noexcept(In_RELEASE);
-   T get()const noexcept(In_RELEASE);
+   heap<T>()noexcept{}
+   heap<T>(const T& val)noexcept;
+   heap<T>& operator+=(const T& val)noexcept;
+   heap<T>& operator=(const T& val)noexcept;
+   T get()const noexcept;
 };
 
 #pragma clang optimize off
 template <typename T>
-inline heap<T>& heap<T>::operator+=(const T& val) noexcept(In_RELEASE)
-{  NOTICE(L=25-21);
+inline heap<T>& heap<T>::operator+=(const T& val) noexcept
+{
    const auto y = val - c;
    const auto t = (this->sum) + y;
    this->c      = (t-(this->sum))-y;
@@ -27,16 +27,16 @@ inline heap<T>& heap<T>::operator+=(const T& val) noexcept(In_RELEASE)
 #pragma clang optimize on
 
 template <typename T>
-inline heap<T>& heap<T>::operator=(const T& val) noexcept(In_RELEASE)
-{  NOTICE(L=3);
+inline heap<T>& heap<T>::operator=(const T& val) noexcept
+{
    this->sum = val;
    this->c   =0.0;
    return *this;
 }
 
 template <typename T>
-inline T heap<T>::get() const noexcept(In_RELEASE)
-{  NOTICE(L=1);
+inline T heap<T>::get() const noexcept
+{
    return sum;   
 }
 
