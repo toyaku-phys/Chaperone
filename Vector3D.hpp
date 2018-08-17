@@ -1,5 +1,7 @@
 #ifndef VECTOR3D_HPP_CHAPERON
 #define VECTOR3D_HPP_CHAPERON
+#include <ostream>
+#include <cmath>
 
 template <typename T>
 constexpr double sqr(const T& s){return s*s;}
