@@ -50,7 +50,7 @@ std::vector<Vector3D> get_next_Beads
                tmp = gl.get();
                boost::algorithm::split(vs,tmp,boost::is_any_of(" ")); 
                if(""==tmp){break;}
-               if("#"==vs.at(0)){break;}
+               if("#"==vs.at(0)){gl.back(); break;}
                //Bead-format: x y z
                res.push_back
                (
