@@ -8,17 +8,17 @@ class Triangle
       int AB, BC, CA;   //Neighbor triangle number
    
    public:
-      Triangle() noexcept(In_RELEASE);
+      Triangle() noexcept;
       Triangle
       (
          int a_, int b_, int c_,
          int n_,
          int AB_, int BC_, int CA_
-      ) noexcept(In_RELEASE);
+      ) noexcept;
 };
 
-Triangle::Triangle() noexcept(In_RELEASE)
-{  NOTICE(L=3);
+Triangle::Triangle() noexcept
+{
    a=b=c=INT_MAX;
    n=INT_MAX;
    AB=BC=CA=INT_MAX;
@@ -29,8 +29,8 @@ Triangle::Triangle
    int a_, int b_, int c_,
    int n_,
    int AB_, int BC_, int CA_
-) noexcept(In_RELEASE)
-{  NOTICE(L=7);
+) noexcept
+{
    a  =  a_;
    b  =  b_;
    c  =  c_;
