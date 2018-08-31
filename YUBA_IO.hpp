@@ -141,7 +141,7 @@ std::vector<Triangle> get_next_Triangle
                if("#"==vs.at(0)){gl.back(); break;}
                res.push_back
                (
-                  Vector3D
+                  Triangle
                   (
                      boost::lexical_cast<double>(vs.at(1)),
                      boost::lexical_cast<double>(vs.at(2)),
