@@ -115,13 +115,13 @@ std::vector<Vector3D> get_next_Coordinate
    return res;
 }
 template<typename GETLINE, typename TIME_RANGE>
-std::vector<Vector3D> get_next_Triangle
+std::vector<Triangle> get_next_Triangle
 (
    GETLINE& gl,
    const TIME_RANGE& tr
 )
 {
-   std::vector<Vector3D> res;
+   std::vector<Triangle> res;
    while(gl.is_open())
    {
       std::string tmp = gl.get();
