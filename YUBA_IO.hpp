@@ -143,13 +143,13 @@ std::vector<Triangle> get_next_Triangle
                (
                   Triangle
                   (
-                     boost::lexical_cast<double>(vs.at(1)),
-                     boost::lexical_cast<double>(vs.at(2)),
-                     boost::lexical_cast<double>(vs.at(3)),
-                     boost::lexical_cast<double>(vs.at(0)),
-                     boost::lexical_cast<double>(vs.at(4)),
-                     boost::lexical_cast<double>(vs.at(5)),
-                     boost::lexical_cast<double>(vs.at(6))
+                     boost::lexical_cast<int>(vs.at(1)),
+                     boost::lexical_cast<int>(vs.at(2)),
+                     boost::lexical_cast<int>(vs.at(3)),
+                     boost::lexical_cast<int>(vs.at(0)),
+                     boost::lexical_cast<int>(vs.at(4)),
+                     boost::lexical_cast<int>(vs.at(5)),
+                     boost::lexical_cast<int>(vs.at(6))
                   )
                );
             }
