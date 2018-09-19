@@ -44,13 +44,5 @@ double angle(const Vector3D& u, const Vector3D& v);
 
 inline std::ostream& operator<<(std::ostream& s, const Vector3D& v);
 
-inline Vector3D operator+(const Vector3D& u, const Vector3D& v);
-inline Vector3D operator-(const Vector3D& u, const Vector3D& v);
-inline Vector3D operator*(double k, const Vector3D& v);
-inline Vector3D operator*(const Vector3D& v, double k);
-inline Vector3D operator/(const Vector3D& v,double k);
-inline double operator*(const Vector3D& u, const Vector3D& v);
-inline Vector3D operator%(const Vector3D& u, const Vector3D& v);
-
 inline std::ostream& operator<<(std::ostream& s, const Vector3D& v);
 inline double angle(const Vector3D& u, const Vector3D& v);
