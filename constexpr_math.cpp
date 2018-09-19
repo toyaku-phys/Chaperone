@@ -20,6 +20,8 @@ constexpr T sqrt(T s)
     return x;
 }
 
+template doulbe sqrt<double>(double);
+
 template <typename T>
 constexpr double max(const T& v1, const T& v2){return (v1<v2)?v2:v1;}
 
