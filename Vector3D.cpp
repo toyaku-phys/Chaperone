@@ -1,5 +1,6 @@
 #include <ostream>
 #include <cmath>
+#include "Vector3D.hpp"
 
 template <typename T>constexpr double sqr(const T& s){return s*s;}
 
