@@ -1,4 +1,7 @@
 #include "Logger.hpp"
+#ifndef RUN_NAME
+#define RUN_NAME "UNOwen"
+#endif
 
 log_info::log_info(const char* file_name, int line_num, log_level::type level)
    : file_name(file_name), line_num(line_num), level(level)
