@@ -1,7 +1,7 @@
 #pragma once
 #include <cassert>
 #include <iostream>
-#include <ifstream>
+#include <fstream>
 #include <string>
 
 class Getline
