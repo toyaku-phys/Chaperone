@@ -1,4 +1,8 @@
 #pragma once
+#include <cassert>
+#include <iostream>
+#include <ifstream>
+#include <string>
 
 class Getline
 {
