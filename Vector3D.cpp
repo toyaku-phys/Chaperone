@@ -63,7 +63,7 @@ bool Vector3D::operator!=(const Vector3D& v)const
 
 double Vector3D::norm()const
 {
-   return std::hypot(x,y,z);
+   return std::sqrt(x*x+y*y+z*z);
 }
 
 double Vector3D::norm2()const
