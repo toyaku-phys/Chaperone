@@ -3,13 +3,13 @@
 
 namespace cexpr_math{
 
-template <typename T> constexpr T sqr(T s);
+constexpr double sqr(double s);
 
-template <typename T> constexpr T sqrt(T s);
+constexpr double sqrt(double s);
 
-template <typename T> constexpr double max(const T& v1, const T& v2);
+constexpr double max(const double& v1, const double& v2);
 
-template <typename T> constexpr T pow(const T& a, const unsigned int b);
+constexpr double pow(const double& a, const unsigned int b);
 
 }
 

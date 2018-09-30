@@ -1,17 +1,16 @@
 #include "constexpr_math.hpp"
 
 namespace cexpr_math{
-template <typename T>
-constexpr T sqr(T s)
+
+constexpr double sqr(double s)
 {
    return s*s;
 }
 
-template <typename T>
-constexpr T sqrt(T s)
+constexpr double sqrt(double s)
 {
-   T x = s / 2.0;
-   T prev = 0.0;
+   double x = s / 2.0;
+   double prev = 0.0;
    while(x!=prev)
    {
       prev=x;
@@ -20,13 +19,11 @@ constexpr T sqrt(T s)
     return x;
 }
 
-template <typename T>
-constexpr double max(const T& v1, const T& v2){return (v1<v2)?v2:v1;}
+constexpr double max(const double& v1, const double& v2){return (v1<v2)?v2:v1;}
 
-template <typename T>
-constexpr T pow(const T& a, const unsigned int b)
+constexpr double pow(const double& a, const unsigned int b)
 {
-   T result=a;
+   double result=a;
    for(unsigned int i=1;i<b;++i){result*=a;}
    return result;
 }
