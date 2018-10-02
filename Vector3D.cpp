@@ -2,7 +2,7 @@
 #include <cmath>
 #include "Vector3D.hpp"
 
-template <typename T>constexpr double sqr(const T& s){return s*s;}
+constexpr double sqr(const double& s){return s*s;}
 
 Vector3D::Vector3D(){x=y=z=0.0;}
 

@@ -1,15 +1,4 @@
-template<typename ELEMENTS>
-void OutYUBA(const int& step, const ELEMENTS& elements, const std::string& file_name, const std::string& tag, bool trunc_f)
-{
-   std::ofstream ofs(file_name,(trunc_f)?(std::ios::trunc):(std::ios::app));
-   ofs<<"# "<<tag<<" "<<step<<"\n";
-   for(size_t i=0,size=elements.size();i<size;++i)
-   {
-      ofs<<elements.at(i)<<"\n";
-   }
-   ofs<<"\n";
-   ofs.close();
-}
+#include "YUBA_IO.hpp"
 
 void OutYUBA(const int& step, const std::vector<Vector3D>& elements, const std::string& file_name, const std::string& tag, bool trunc_f)
 {
@@ -23,11 +12,23 @@ void OutYUBA(const int& step, const std::vector<Vector3D>& elements, const std::
    ofs.close();
 }
 
-template<typename GETLINE, typename TIME_RANGE>
+void OutYUBA(const int& step, const std::vector<Triangle>& elements, const std::string& file_name, const std::string& tag, bool trunc_f)
+{
+   std::ofstream ofs(file_name,(trunc_f)?(std::ios::trunc):(std::ios::app));
+   ofs<<"# "<<tag<<" "<<step<<"\n";
+   for(size_t i=0,size=elements.size();i<size;++i)
+   {
+      const Triangle& t =elements.at(i);
+      ofs<<i<<" "<<t.a<<" "<<t.b<<" "<<t.c<<" "<<t.AB<<" "<<t.BC<<" "<<t.CA<<"\n";
+   }
+   ofs<<"\n";
+   ofs.close();
+}
+
 std::vector<Vector3D> get_next_Beads
 (
-   GETLINE& gl,
-   const TIME_RANGE& tr
+   Getline& gl,
+   const std::tuple<int,int>& tr
 )
 {
    std::vector<Vector3D> res;
@@ -68,11 +69,10 @@ std::vector<Vector3D> get_next_Beads
    return res;
 }
 
-template<typename GETLINE, typename TIME_RANGE>
 std::vector<Vector3D> get_next_Coordinate
 (
-   GETLINE& gl,
-   const TIME_RANGE& tr
+   Getline& gl,
+   const std::tuple<int,int>& tr
 )
 {
    std::vector<Vector3D> res;
@@ -111,11 +111,11 @@ std::vector<Vector3D> get_next_Coordinate
    throw std::out_of_range("end");
    return res;
 }
-template<typename GETLINE, typename TIME_RANGE>
+
 std::vector<Triangle> get_next_Triangle
 (
-   GETLINE& gl,
-   const TIME_RANGE& tr
+   Getline& gl,
+   const std::tuple<int,int>& tr
 )
 {
    std::vector<Triangle> res;
