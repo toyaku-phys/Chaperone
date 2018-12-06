@@ -1,6 +1,6 @@
 #include "heap.hpp"
 
-#pragma clang optimize off
+//#pragma clang optimize off
 heap& heap::operator+=(const double& val) noexcept
 {
    const auto y = val - c;
@@ -9,7 +9,7 @@ heap& heap::operator+=(const double& val) noexcept
    this->sum    = t;
    return *this;
 }
-#pragma clang optimize on
+//#pragma clang optimize on
 
 heap& heap::operator=(const double& val) noexcept
 {
