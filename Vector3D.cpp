@@ -131,7 +131,7 @@ std::ostream& operator<<(std::ostream& s, const Vector3D& v)
 double angle(const Vector3D& u, const Vector3D& v)
 {
       double cos=u*v/(u.norm()*v.norm());
-      if(1.0<cos && std::abs(1.0-cos)<10*DBL_EPSILON){cos=+1.0;}
-      if(1.0>cos && std::abs(1.0-cos)<10*DBL_EPSILON){cos=+1.0;}
+      if( 1.0<cos && std::abs( 1.0-cos)<10*DBL_EPSILON){cos=+1.0;}
+      if(-1.0>cos && std::abs(-1.0-cos)<10*DBL_EPSILON){cos=-1.0;}
       return std::acos(cos);
 }
