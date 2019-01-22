@@ -135,3 +135,7 @@ double angle(const Vector3D& u, const Vector3D& v)
       if(-1.0>cos && std::abs(-1.0-cos)<10*DBL_EPSILON){cos=-1.0;}
       return std::acos(cos);
 }
+double Calc_Phi(const Vector3D& n_i,const Vector3D& n_j)
+{
+   return std::atan2((n_i%n_j).norm(),n_i*n_j);
+}
