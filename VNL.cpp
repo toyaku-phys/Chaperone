@@ -10,7 +10,7 @@ VNL::VNL
    double skin_width,
    const std::vector<Vector3D>* ps1,
    const std::vector<Vector3D>* ps2
-) noexcept(In_RELEASE)
+) 
 {
    set(cutoff_length,skin_width);
    target(ps1,ps2);
@@ -20,7 +20,7 @@ void VNL::set
 (
    double cutoff_length,
    double skin_width
-) noexcept(In_RELEASE)
+) 
 {
    Rc=cutoff_length;
    SKIN=skin_width;
@@ -31,14 +31,14 @@ void VNL::target
 (
    const std::vector<Vector3D>* ps1,
    const std::vector<Vector3D>*  ps2
-) noexcept(In_RELEASE)
+) 
 {
    ps1_ptr = ps1;
    ps2_ptr = ps2;
    f_twins = ps1==ps2;
 }
 
-void VNL::init() noexcept(In_RELEASE)
+void VNL::init() 
 {
    neighbor_lists.clear();
    d_1st=std::tuple<bool,int>(true,0);
@@ -71,7 +71,7 @@ void VNL::init() noexcept(In_RELEASE)
    return ;
 }
 
-const std::vector<int>& VNL::at(int pos) noexcept(In_RELEASE)
+const std::vector<int>& VNL::at(int pos) 
 {
    if(!f_guarantee){init();}
    return neighbor_lists.at(pos);
@@ -82,7 +82,7 @@ void VNL::moved
    int    pos, 
    double disp,
    bool   is_ps1
-) noexcept(In_RELEASE)
+) 
 {
    const auto get =[this](const std::tuple<bool,int>& d)->double&
    {
