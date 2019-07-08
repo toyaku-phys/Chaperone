@@ -4,8 +4,8 @@
 #include <tuple>
 #include <string>
 
-#include "Chaperone/Vector3D.hpp"
-#include "Chaperone/heap.hpp"
+#include "Vector3D.hpp"
+#include "heap.hpp"
 
 class VNL
 {
