@@ -6,9 +6,12 @@ constexpr double sqr(const double& s){return s*s;}
 
 Vector3D::Vector3D(){x=y=z=0.0;}
 
-Vector3D::Vector3D(double x_, double y_, double z_)
+//Vector3D::Vector3D(double x_, double y_, double z_)
+//{
+//   this->x=x_;  this->y=y_;  this->z=z_;
+//}
+constexpr Vector3D::Vector3D(double x_, double y_, double z_):x(x_),y(y_),z(z_)
 {
-   this->x=x_;  this->y=y_;  this->z=z_;
 }
 
 Vector3D& Vector3D::operator=(const Vector3D& v)

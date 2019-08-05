@@ -13,7 +13,8 @@ class Vector3D{
       double z;
          
       Vector3D();
-      Vector3D(double x_,double y_,double z_);
+//      Vector3D(double x_,double y_,double z_);
+      constexpr Vector3D(double x_,double y_,double z_);
          
       Vector3D& operator=(const Vector3D& v);
       
