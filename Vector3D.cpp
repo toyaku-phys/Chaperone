@@ -10,9 +10,9 @@ Vector3D::Vector3D(){x=y=z=0.0;}
 //{
 //   this->x=x_;  this->y=y_;  this->z=z_;
 //}
-constexpr Vector3D::Vector3D(double x_, double y_, double z_):x(x_),y(y_),z(z_)
-{
-}
+//constexpr Vector3D::Vector3D(double x_, double y_, double z_):x(x_),y(y_),z(z_)
+//{
+//}
 
 Vector3D& Vector3D::operator=(const Vector3D& v)
 {
