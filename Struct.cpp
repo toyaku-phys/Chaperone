@@ -23,3 +23,5 @@ Triangle::Triangle
    CA = CA_;
 }
 
+Particle::Particle(){}
+Particle::Particle(const Vector3D& a, const Vector3D& b){ q=a; p=b; }

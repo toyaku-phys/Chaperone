@@ -7,7 +7,7 @@ class Triangle
       int  a,  b,  c;   //vertex number
       int  n;           //triangle number
       int AB, BC, CA;   //Neighbor triangle number
-   
+
    public:
       Triangle() noexcept;
       Triangle
@@ -18,3 +18,12 @@ class Triangle
       ) noexcept;
 };
 
+
+class Particle
+{
+   public:
+      Vector3D q;//coordinates
+      Vector3D p;//velocity
+      Particle();
+      Particle(const Vector3D& a, const Vector3D& b);
+};
