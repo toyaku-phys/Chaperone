@@ -1,5 +1,6 @@
 #pragma once
 #include <climits>
+#include "Vector3D.hpp"
 
 class Triangle
 {
