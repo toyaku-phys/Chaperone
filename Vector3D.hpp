@@ -13,7 +13,8 @@ class Vector3D{
       double z;
          
       Vector3D();
-      Vector3D(double x_,double y_,double z_);
+//      Vector3D(double x_,double y_,double z_);
+      constexpr Vector3D(double x_,double y_,double z_);
          
       Vector3D& operator=(const Vector3D& v);
       
@@ -46,4 +47,6 @@ std::ostream& operator<<(std::ostream& s, const Vector3D& v);
 
 std::ostream& operator<<(std::ostream& s, const Vector3D& v);
 double angle(const Vector3D& u, const Vector3D& v);
-double Calc_Phi(const Vector3D& n_i,const Vector3D& n_j);
+constexpr Vector3D::Vector3D(double x_, double y_, double z_):x(x_),y(y_),z(z_)
+{
+}
